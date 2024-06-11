@@ -26,7 +26,7 @@ context('Dynamics tables', ()=>{
       })  
     })
 // Check statuses. All should be active and green
-    it.only('Chck statuses', ()=>{
+    it('Chck statuses', ()=>{
        cy.get('tbody').find('tr').each(statusHero =>{
         cy.wrap(statusHero).find('td').eq(1).find('span').should('have.text', 'Active').should('have.class', 'bg-green-400 text-green-800')
 
